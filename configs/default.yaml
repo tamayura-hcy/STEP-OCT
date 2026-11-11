@@ -1,0 +1,30 @@
+# STEP — default configuration
+# Every constant here is shared by the three transfer directions; nothing is
+# tuned on the cohort that is about to be classified.
+
+data:
+  root: data
+  image_size: 256          # centre crop, shorter side resized to 292 first
+  batch_size: 64
+  classes: [AMD, DME, NORMAL]
+
+model:
+  backbone: resnet50
+  head_width: 1024
+  stage_descriptor: 3      # stage-3 map -> descriptor
+  stage_label: 4           # stage-4 map -> per-position labels
+
+adaptation:
+  bn_momentum: 0.1
+  bn_eps: 1.0e-6
+  views: 4
+  tau_multiplier_3x3: 0.30 # tau_i = 0.30 * mean over channels of the median of c_3
+  tau_fixed_5x5: 0.24
+  noise_sigma: 0.007
+  noise_banks: 2
+  noise_bank_size: 64
+
+readout:
+  d_max: 80
+  ranks: [16, 23, 30, 37, 44, 52, 59, 66, 73, 80]
+  rounds_per_rank: 3
