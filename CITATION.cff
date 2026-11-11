@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below."
+title: "STEP: Staged Target-Label Estimation by Projection for Source-Free Cross-Device OCT Classification"
+type: software
+authors:
+  - family-names: Han
+    given-names: Chengyou
+  - family-names: Luo
+    given-names: Yuemei
+  - family-names: Liu
+    given-names: Weide
+  - family-names: Cheng
+    given-names: Jun
+repository-code: "https://github.com/tamayura-hcy/STEP-OCT"
+license: MIT
+version: 1.0.0
+date-released: 2026-11-11
+preferred-citation:
+  type: article
+  title: "STEP: Staged Target-Label Estimation by Projection for Source-Free Cross-Device OCT Classification"
+  authors:
+    - family-names: Han
+      given-names: Chengyou
+    - family-names: Luo
+      given-names: Yuemei
+    - family-names: Liu
+      given-names: Weide
+    - family-names: Cheng
+      given-names: Jun
+  journal: "IEEE Transactions on Instrumentation and Measurement"
+  year: 2026
